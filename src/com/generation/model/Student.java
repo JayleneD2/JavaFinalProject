@@ -24,6 +24,10 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        if(!isAttendingCourse(course.getCode())){
+            courses.add(course);
+        }
+
     }
 
     public void registerApprovedCourse( Course course )
