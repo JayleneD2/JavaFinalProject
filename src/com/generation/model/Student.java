@@ -39,6 +39,12 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+        for (Course course : courses) {
+            if(course.getCode().equals(courseCode)){
+                System.out.println("Student is already enrolled in "+courseCode+"!");
+                return true;
+            }
+        }
         return false;
     }
 
@@ -51,6 +57,6 @@ public class Student
     @Override
     public String toString()
     {
-        return "Student {" + super.toString() + "}";
+        return "Student {" + super.toString() + "}" + "{" + courses + "}";
     }
 }
